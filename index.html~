@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<!--
+	TRUNG C CHAU
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Trung C Chau</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<a href="index.html" class="logo">Trung C Chau</a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">About me</a></li>
+							<li><a href="research.html">Research (Coming soon)</a></li>
+							<li><a href="talks.html">Talks & Seminars</a></li>
+							<li><a href="travel.html">Travel</a></li>
+							<li><a href="teaching.html">Teaching</a></li>
+							<li><a href="services.html">Services</a></li>
+							<li><a href="life.html">Some Photos</a></li>
+					</nav>
+
+				<!-- Banner -->
+				<!-- Note: The "styleN" class below should match that of the header element. -->
+					<section id="banner">
+						<div class="inner">
+							<span class="image">
+								<img src="images/banner.jpg" alt="" width="900" height="600"  />
+							</span>
+							<header class="major">
+								<h1>Trung C Chau</h1>
+							</header>
+							<div class="content">
+								<p><strong>First year graduate student in mathematics at the <a href="http://math.utah.edu">University of Utah</a></strong>.</p>
+							</div>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+						<!-- Two -->
+							<section id="two">
+								<div class="inner">
+									<header class="major">
+										<h2>About me</h2>
+									</header>
+											
+
+<p><span class="image right"><img src="images/trung.jpg" alt="" width="900" height="350"  /></span>I am a first-year graduate student at the <a href="http://www.math.utah.edu/">University of Utah</a> studying commutative algebra. My research interests lie in commutative algebra, homological algebra and algebraic topology. Particularly, I am interested in the relation between the functors Ext, Tor and free, injective resolutions of modules over Noetherian rings.
+</p>
+
+<p>I am from Vietnam and obtained my Bachelor in Mathematics at the <a href="https://web.hcmus.edu.vn/en/">University of Science, Vietnam National Univerisity, Ho Chi Minh City, Vietnam</a>, before moving to Salt Lake City. Here is a little bit about me: I can speak Vietnamese fluently. "I make jokes when I'm uncomfortable". I have been in 4 states of America. I am an avid movie-goers and a big fan of sitcoms and would love to talk about them.</p>
+
+<p>Here is my <a href="files/CV.pdf">CV</a>, updated November 2018.	</p>	
+
+								</div>
+							</section>
+
+					</div>
+
+						<!-- One -->
+							<section id="one" class="tiles">
+
+								<article>
+									<span class="image">
+										<img src="images/b2.jfif" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="research.html" class="link">Research</a></h3>
+										<p>Coming soon</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="images/vegas.jfif" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="talks.html" class="link">Talks & Seminars</a></h3>
+										<p>Presentations, Slides and Notes</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="images/b1.jpg" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="travel.html" class="link">Travel</a></h3>
+										<p>Conferences, Workshops and Courses</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="images/phila.jfif" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="teaching.html" class="link">Teaching</a></h3>
+										<p>Courses, Material and development</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="images/hollywood.jfif" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="services.html" class="link">Services</a></h3>
+										<p></p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="images/anna.jpg" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="life.html" class="link">Some Photos</a></h3>
+										<p>Memories I want to keep</p>
+									</header>
+								</article>
+							</section>
+
+
+				<!-- Contact -->
+					<section id="two">
+							<div class="inner">
+								<header class="major">
+									<h2>Contact</h2>
+								</header>
+								<p>Trung C Chau<br>Department of Mathematics<br>155 South 1400 East, LCB Loft<br>University of Utah<br>Salt Lake City, UT 84112-0090</p><p>chau at math dot utah dot edu</p>				
+							</div>
+					</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>&copy; Trung C Chau</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
