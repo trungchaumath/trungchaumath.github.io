@@ -1,0 +1,198 @@
+####### Petersen graph
+
+print(f"Petersen graph")
+
+vertices = ['0','1','2','3','4','5','6','7','8','9']
+
+edges = [
+    ('0','1'),('1','2'),('2','3'),('3','4'),('4','0'),  # outer pentagon
+    ('5','7'),('7','9'),('9','6'),('6','8'),('8','5'),  # inner star
+    ('0','5'),('1','6'),('2','7'),('3','8'),('4','9')   # spokes
+]
+
+
+# Create graph
+G= Graph()
+G.add_vertices(vertices)
+G.add_edges(edges)
+
+# Output all simple cycles
+cycles = G.all_simple_cycles()
+
+# ----- Helper functions -----
+def directed_edge(cycle, u, v):
+    n = len(cycle)
+    for i in range(n):
+        if cycle[i] == u and cycle[(i+1) % n] == v:
+            return True
+    return False
+
+def disjoint(e1, e2):
+    return len(set(e1) & set(e2)) == 0
+
+order = {v:i for i,v in enumerate(vertices)}
+
+# ----- Compute c_r -----
+
+c_r = {}
+for c in cycles:
+    if directed_edge(c, '0', '1'):
+        r = len(c)
+        c_r[r] = c_r.get(r, 0) + 1
+
+# ----- Main test -----
+
+for (x,y) in edges:
+
+    if not disjoint(('0','1'), (x,y)):
+        continue
+    if order[x] > order[y]:
+        continue
+
+    d_r = {}
+    e_r = {}
+
+    for c in cycles:
+        if not directed_edge(c, '0', '1'):
+            continue
+
+        r = len(c)
+
+        if directed_edge(c, x, y):
+            d_r[r] = d_r.get(r, 0) + 1
+
+        if directed_edge(c, y, x):
+            e_r[r] = e_r.get(r, 0) + 1
+
+    # compute differences
+    diff = {}
+    for r in c_r:
+        if r in d_r and r in e_r:
+            diff[r] = d_r[r] - e_r[r]
+
+    # check cross-multiplicative condition
+    okk = True
+    ok = True
+    rs = list(diff.keys())
+
+    for i in range(len(rs)):
+        for j in range(len(rs)):
+            r = rs[i]
+            s = rs[j]
+
+            if c_r[r] * diff[s] != c_r[s] * diff[r]:
+                ok = False
+                okk = False
+                break
+        if not ok:
+            break
+
+    print(f"Edge {(x,y)}: {'OK' if ok else 'FAIL'}")
+    
+if okk:
+    print("The graph is TB-symmetrical")
+if not okk:
+    print("The graph is NOT TB-symmetrical")
+
+
+##### Heawood graph
+
+print(f"Heawood graph")
+
+vertices = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D']
+
+# Edges
+edges = [
+    # Outer 14-cycle
+    ('0','1'), ('1','2'), ('2','3'), ('3','4'), ('4','5'), ('5','6'),
+    ('6','7'), ('7','8'), ('8','9'), ('9','A'), ('A','B'),
+    ('B','C'), ('C','D'), ('D','0'),
+
+    # "Opposite" chords (i ↔ i+7 mod 14)
+    ('0','7'), ('1','8'), ('2','9'), ('3','A'),
+    ('4','B'), ('5','C'), ('6','D')
+]
+
+
+# Create graph
+G= Graph()
+G.add_vertices(vertices)
+G.add_edges(edges)
+
+# Output all simple cycles
+cycles = G.all_simple_cycles()
+
+# ----- Helper functions -----
+def directed_edge(cycle, u, v):
+    n = len(cycle)
+    for i in range(n):
+        if cycle[i] == u and cycle[(i+1) % n] == v:
+            return True
+    return False
+
+def disjoint(e1, e2):
+    return len(set(e1) & set(e2)) == 0
+
+order = {v:i for i,v in enumerate(vertices)}
+
+# ----- Compute c_r -----
+
+c_r = {}
+for c in cycles:
+    if directed_edge(c, '0', '1'):
+        r = len(c)
+        c_r[r] = c_r.get(r, 0) + 1
+
+# ----- Main test -----
+
+for (x,y) in edges:
+
+    if not disjoint(('0','1'), (x,y)):
+        continue
+    if order[x] > order[y]:
+        continue
+
+    d_r = {}
+    e_r = {}
+
+    for c in cycles:
+        if not directed_edge(c, '0', '1'):
+            continue
+
+        r = len(c)
+
+        if directed_edge(c, x, y):
+            d_r[r] = d_r.get(r, 0) + 1
+
+        if directed_edge(c, y, x):
+            e_r[r] = e_r.get(r, 0) + 1
+
+    # compute differences
+    diff = {}
+    for r in c_r:
+        if r in d_r and r in e_r:
+            diff[r] = d_r[r] - e_r[r]
+
+    # check cross-multiplicative condition
+    okk= True
+    ok = True
+    rs = list(diff.keys())
+
+    for i in range(len(rs)):
+        for j in range(len(rs)):
+            r = rs[i]
+            s = rs[j]
+
+            if c_r[r] * diff[s] != c_r[s] * diff[r]:
+                ok = False
+                okk = False
+                break
+        if not ok:
+            break
+
+    print(f"Edge {(x,y)}: {'OK' if ok else 'FAIL'}")
+    
+if okk:
+    print("The graph is TB-symmetrical")
+if not okk:
+    print("The graph is NOT TB-symmetrical")
